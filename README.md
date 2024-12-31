@@ -19,3 +19,5 @@
     -creación del documento 'marca.php' que contiene los links al CRUD de la tabla 'marca'
     -creación del documento 'crear_marca.php' donde se encuentra el formulario para crear una nueva marca
     -creación del documento 'guardar_marca.php' que contiene el Query para guardar la información del formulario 'crear_marca.php'
+
+pendiente terminar el formulario de eliminar
