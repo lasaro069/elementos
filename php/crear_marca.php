@@ -36,8 +36,8 @@
 
             <div class="contenedor-inputs">
 
-                <label class="label-inputs-formulario" for="pais">País:</label>
-                <input class="entrada-datos" type="text" id="pais" name="pais" required><br>
+                <label class="label-inputs-formulario" for="id_pais">ID País:</label>
+                <input class="entrada-datos" type="text" id="id_pais" name="id_pais" required><br>
             </div>
 
 
@@ -64,10 +64,6 @@
             <button type="button" class="btn-close input-mensaje" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
 
-<!-- 
-                <div class="contenedor-mensaje">
-                <p class="mensaje"><?= $_SESSION['mensaje'] ?> </p>
-                <input class="input-mensaje" name="mensaje" type="submit" value="X"> -->
             <?php session_unset(); } ?>
         
     

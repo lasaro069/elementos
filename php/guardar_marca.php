@@ -9,10 +9,10 @@
         //recibimos la información del formulario 'crear_marca.php' y la guardamos en variables
         $marca = $_POST['marca'];
         $fabricante = $_POST['fabricante'];
-        $pais = $_POST['id_pais'];
+        $id_pais = $_POST['id_pais'];
 
         // creamos la consulta para insertar los datos en la tabla 'marcas'
-        $query = "INSERT INTO marca (marca, fabricante, id_pais) VALUES ('$marca', '$fabricante', '$pais')";
+        $query = "INSERT INTO marca (marca, fabricante, id_pais) VALUES ('$marca', '$fabricante', '$id_pais')";
 
         //guardamos la consulta en la base de datos
         $resultado = mysqli_query($conn, $query);

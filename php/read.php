@@ -26,7 +26,7 @@
             <img class="imagen" src="../img/tipo.svg" alt="" class="icono">
             <p class="texto-opcion">Listar Tipo</p>
         </a>
-        <a href="./eliminar.php" class="opciones">
+        <a href="./listar_pais.php" class="opciones">
             <img class="imagen" src="../img/pais.svg" alt="" class="icono">
             <p class="texto-opcion">Listar País</p>
         </a>
