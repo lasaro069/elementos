@@ -14,11 +14,12 @@
         <h1>Tienda de Equipos</h1>
         <nav class="navbar">
             <a href="./index.php">Inicio</a>
-            <a href="./ingresar.php">Elementos</a>
-            <a href="./modificar.php">Categorías</a>
-            <a href="./buscar.php">Estado</a>
+            <a href="./elemento.php">Elementos</a>
+            <a href="./categoria.php">Categorías</a>
+            <a href="./estado.php">Estado</a>
             <a href="marca.php">Marcas</a>
-            <a href="./eliminar.php">Gamas</a>
+            <a href="./gama.php">Gamas</a>
+            <a href="./pais.php">Países</a>
         </nav>
     </header>
     <main>
