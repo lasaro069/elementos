@@ -9,20 +9,20 @@
     <div class="contenedor-formulario">
 
 
-        <form class="formulario-ingreso" action="guardar_marca.php" method="post">
-            <h2>Crear Marca</h2>
+        <form class="formulario-ingreso" action="guardar_categoria.php" method="post">
+            <h2>Crear Categoría</h2>
 
     <!-- 
             <div class="contenedor-inputs">
-                <label class="label-inputs-formulario"  for="id-marca">Id Marca:</label>
-                <input class="entrada-datos" type="text" id="id-marca" name="id-marca" required placeholder="Este campo no debe poder modificarse. "><br>
+                <label class="label-inputs-formulario"  for="id-categoria">Id categoria:</label>
+                <input class="entrada-datos" type="text" id="id-categoria" name="id-categoria" required placeholder="Este campo no debe poder modificarse. "><br>
 
             </div> -->
 
 
             <div class="contenedor-inputs">
-                <label class="label-inputs-formulario" for="marca">Marca:</label>
-                <input class="entrada-datos" type="text" id="marca" name="marca" required><br>
+                <label class="label-inputs-formulario" for="categoria">Categoría:</label>
+                <input class="entrada-datos" type="text" id="categoria" name="categoria" required><br>
 
             </div>
 
@@ -30,26 +30,21 @@
 
             <div class="contenedor-inputs">
 
-                <label class="label-inputs-formulario" for="fabricante">Fabricante:</label>
-                <input class="entrada-datos" type="text" id="fabricante" name="fabricante" required><br>
-            </div>
-
-            <div class="contenedor-inputs">
-
-                <label class="label-inputs-formulario" for="id_pais">ID País:</label>
-                <input class="entrada-datos" type="text" id="id_pais" name="id_pais" required><br>
+                <label class="label-inputs-formulario" for="observaciones">Observaciones:</label>
+                <input class="entrada-datos" type="text" id="observaciones" name="observaciones" required><br>
             </div>
 
 
 
-            <input class="boton-ingresar" name="guardar-marca" type="submit" value="Registrar">
+
+            <input class="boton-ingresar" name="guardar-categoria" type="submit" value="Registrar">
 
 
 
 
 
-            <button class="boton-ingresar" name="listar-marca" value="Listado Genaral">
-                        <a class="boton-ingresar-a" href="listar_marca.php">Listado General</a>
+            <button class="boton-ingresar" name="listar-categoria" value="Listado Genaral">
+                        <a class="boton-ingresar-a" href="listar_categoria.php">Listado General</a>
             </button>
 
 

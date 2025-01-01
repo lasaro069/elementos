@@ -15,28 +15,26 @@
 
 
 
-    if (isset($_GET['id_marca'])) {
-            $id_marca = $_GET['id_marca'];
-            $query = "SELECT * FROM marca WHERE id_marca = $id_marca";
+    if (isset($_GET['id_categoria'])) {
+            $id_categoria = $_GET['id_categoria'];
+            $query = "SELECT * FROM categoria WHERE id_categoria = $id_categoria";
             $respuesta = mysqli_query($conn, $query);
 
 
             if (mysqli_num_rows($respuesta) == 1) {
                 
                 $row = mysqli_fetch_array($respuesta);  // fetch_array() returns an array of strings that corresponds to the fetched row or NULL if there are no more rows in resultset.
-                $marca = $row['marca'];
-                $fabricante = $row['fabricante'];
-                $pais = $row['id_pais'];
+                $categoria = $row['categoria'];
+                $observaciones = $row['observaciones'];
             }
     }
 
     if (isset($_POST['modificar-registro'])) {
-        $id_marca = $_GET['id_marca'];
-        $marca = $_POST['marca'];
-        $fabricante = $_POST['fabricante'];
-        $pais = $_POST['id_pais'];
+        $id_categoria = $_GET['id_categoria'];
+        $categoria = $_POST['categoria'];
+        $observaciones = $_POST['observaciones'];
 
-        $query = "UPDATE marca SET marca = '$marca', fabricante = '$fabricante', id_pais = '$pais' WHERE id_marca = $id_marca";
+        $query = "UPDATE categoria SET categoria = '$categoria', observaciones = '$observaciones' WHERE id_categoria = $id_categoria";
         mysqli_query($conn, $query);
 
         //guardamos la consulta en la base de datos
@@ -54,7 +52,7 @@
         $_SESSION['tipo-mensaje'] = "success"; // creamos un tipo de mensaje para mostrar en la página
 
 
-        header("Location: listar_marca.php");
+        header("Location: listar_categoria.php");
 
     }
 
@@ -77,20 +75,20 @@
 <div class="contenedor-formulario">
 
 
-<form class="formulario-ingreso" action="modificar_marca.php?id_marca=<?php echo $_GET['id_marca']; ?>" method="post">
-    <h2>Modificar Marca</h2>
+<form class="formulario-ingreso" action="modificar_categoria.php?id_categoria=<?php echo $_GET['id_categoria']; ?>" method="post">
+    <h2>Modificar categoria</h2>
 
 
     <div class="contenedor-inputs">
-        <label class="label-inputs-formulario"  for="id-marca">Id Marca:</label>
-        <input class="entrada-datos" type="text" id="id-marca" name="id-marca" readonly placeholder="<?php echo $id_marca ?> "><br>
+        <label class="label-inputs-formulario"  for="id-categoria">Id:</label>
+        <input class="entrada-datos" type="text" id="id-categoria" name="id-categoria" readonly placeholder="<?php echo $id_categoria ?> "><br>
 
     </div> 
 
 
     <div class="contenedor-inputs">
-        <label class="label-inputs-formulario" for="marca">Marca:</label>
-        <input class="entrada-datos" type="text" id="marca" name="marca" value="<?php echo $marca ?>" required><br>
+        <label class="label-inputs-formulario" for="categoria">Categoría:</label>
+        <input class="entrada-datos" type="text" id="categoria" name="categoria" value="<?php echo $categoria ?>" required><br>
 
     </div>
 
@@ -98,15 +96,10 @@
 
     <div class="contenedor-inputs">
 
-        <label class="label-inputs-formulario" for="fabricante">Fabricante:</label>
-        <input class="entrada-datos" type="text" id="fabricante" name="fabricante" value="<?php echo $fabricante ?>"  required><br>
+        <label class="label-inputs-formulario" for="observaciones">Observaciones:</label>
+        <input class="entrada-datos" type="text" id="observaciones" name="observaciones" value="<?php echo $observaciones ?>"  ><br>
     </div>
 
-    <div class="contenedor-inputs">
-
-        <label class="label-inputs-formulario" for="pais">País:</label>
-        <input class="entrada-datos" type="text" id="pais" name="pais" value="<?php echo $pais ?>"  required><br>
-    </div>
 
 
 

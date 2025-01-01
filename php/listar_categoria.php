@@ -14,14 +14,14 @@
 
 
 
-<form class="formulario-ingreso" action="buscar_marca.php" method="post">
-                    <h2>Buscar Marca</h2>
+<form class="formulario-ingreso" action="buscar_categoria.php" method="post">
+                    <h2>Buscar Categoría</h2>
 
             
 
                     <div class="contenedor-inputs">
-                        <label class="label-inputs-formulario" for="marca">Id Marca:</label>
-                        <input class="entrada-datos" type="text" id="id_marca" name="id_marca" ><br>
+                        <label class="label-inputs-formulario" for="categoria">Id:</label>
+                        <input class="entrada-datos" type="text" id="id_categoria" name="id_categoria" ><br>
 
                     </div>
 
@@ -29,8 +29,8 @@
 
 
                     <div class="contenedor-inputs">
-                        <label class="label-inputs-formulario" for="marca">Marca:</label>
-                        <input class="entrada-datos" type="text" id="marca" name="marca" ><br>
+                        <label class="label-inputs-formulario" for="categoria">Categoría:</label>
+                        <input class="entrada-datos" type="text" id="categoria" name="categoria" ><br>
 
                     </div>
 
@@ -38,19 +38,19 @@
 
                     <div class="contenedor-inputs">
 
-                        <label class="label-inputs-formulario" for="fabricante">Fabricante:</label>
-                        <input class="entrada-datos" type="text" id="fabricante" name="fabricante" ><br>
+                        <label class="label-inputs-formulario" for="observaciones">Obs.:</label>
+                        <input class="entrada-datos" type="text" id="observaciones" name="observaciones" ><br>
                     </div>
 
 
 
 
-                    <input class="boton-ingresar" name="guardar-marca" type="submit" value="Buscar">
+                    <input class="boton-ingresar" name="guardar-categoria" type="submit" value="Buscar">
 
 
 
-                    <button class="boton-ingresar" name="listar-marca" value="Listado Genaral">
-                        <a class="boton-ingresar-a" href="listar_marca.php">Listado General</a>
+                    <button class="boton-ingresar" name="listar-categoria" value="Listado Genaral">
+                        <a class="boton-ingresar-a" href="listar_categoria.php">Listado General</a>
                     </button>
 
 
@@ -87,31 +87,29 @@
                 </tr>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Marca</th>
-                    <th scope="col">Fabricante</th>
-                    <th scope="col">País</th>
+                    <th scope="col">Categoría</th>
+                    <th scope="col">Observaciones</th>
                     <th scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                 
-                    $query = "SELECT * FROM marca";
-                    $respuesta_marca = mysqli_query($conn, $query);
+                    $query = "SELECT * FROM categoria";
+                    $respuesta_categoria = mysqli_query($conn, $query);
 
-                    while($row = mysqli_fetch_array($respuesta_marca)) { ?>
+                    while($row = mysqli_fetch_array($respuesta_categoria)) { ?>
                         <tr>
-                            <td> <?php echo $row['id_marca'] ?> </td>
-                            <td> <?php echo $row['marca'] ?> </td>
-                            <td> <?php echo $row['fabricante'] ?> </td>
-                            <td> <?php echo $row['id_pais'] ?> </td>
+                            <td> <?php echo $row['id_categoria'] ?> </td>
+                            <td> <?php echo $row['categoria'] ?> </td>
+                            <td> <?php echo $row['observaciones'] ?> </td>
                             <td>
 
                                 <div class="contenedor-imagen">
-                                    <a class="caja-imagen caja-imagen-edit" href="modificar_marca.php?id_marca=<?php echo $row['id_marca'] ?>">
+                                    <a class="caja-imagen caja-imagen-edit" href="modificar_categoria.php?id_categoria=<?php echo $row['id_categoria'] ?>">
                                         <img class="icono icono-edit" src="../img/edit.ico" alt="">
                                     </a>
-                                    <a class="caja-imagen caja-imagen-delete" href="eliminar_marca.php?id_marca=<?php echo $row['id_marca'] ?>">
+                                    <a class="caja-imagen caja-imagen-delete" href="eliminar_categoria.php?id_categoria=<?php echo $row['id_categoria'] ?>">
                                         <img class="icono icono-delete" src="../img/delete.ico" alt="">
                                     </a>
 
