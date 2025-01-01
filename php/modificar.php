@@ -1,142 +1,57 @@
-<?php include ('ddbb.php') ?>
+<?php 
 
-<?php include ('header.php') ?>
-
-
-
-
-<div class="contenedor-formulario contenedor-formulario-modificar">
+    include ('ddbb.php'); 
 
 
 
 
 
-
-    <form class="formulario-ingreso" action="modificar.php" method="post">
-                    <h2>Buscar Marca</h2>
-
-            
-
-
-                    <div class="contenedor-inputs">
-                        <label class="label-inputs-formulario" for="marca">Marca:</label>
-                        <input class="entrada-datos" type="text" id="marca" name="marca" ><br>
-
-                    </div>
+    if (isset($_GET['id_marca'])) {
+            $id_marca = $_GET['id_marca'];
+            $query = "SELECT * FROM marca WHERE id_marca = $id_marca";
+            $respuesta = mysqli_query($conn, $query);
 
 
-
-                    <div class="contenedor-inputs">
-
-                        <label class="label-inputs-formulario" for="fabricante">Fabricante:</label>
-                        <input class="entrada-datos" type="text" id="fabricante" name="fabricante" ><br>
-                    </div>
-
-
-
-
-                    <input class="boton-ingresar" name="guardar-marca" type="submit" value="Buscar">
-
-
-
-
-
-                    <?php if (isset($_SESSION['mensaje'])) { ?>
-
-
-                        <div class="alert alert-success alert-dismissible fade show contenedor-mensaje" role="alert">
-                        <p><?= $_SESSION['mensaje'] ?>  </p>   
-                        <button type="button" class="btn-close input-mensaje" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-
-                <?php session_unset(); } ?>
-            
-        
-
-
-
-
-
-        </form>
-
-
-
-
-
-
-
-
-
-
-
- 
-    <div class="contenedor-tabla">
-
-        <table class="tabla">
-            
-            <thead>
-                <tr >
-                    <th class="titulo-tabla" colspan="5">Listado de Elementos</th>
-                </tr>
-                <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Marca</th>
-                    <th scope="col">Fabricante</th>
-                    <th scope="col">País</th>
-                    <th scope="col">Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
+            if (mysqli_num_rows($respuesta) == 1) {
                 
-                    $marca = $_POST['marca'];
-                    $fabricante = $_POST['fabricante'];
-                    
-                    $query = "SELECT * FROM marca WHERE marca = '$marca' OR fabricante = '$fabricante'";
-                    $respuesta_marca = mysqli_query($conn, $query);
+                $row = mysqli_fetch_array($respuesta);  // fetch_array() returns an array of strings that corresponds to the fetched row or NULL if there are no more rows in resultset.
+                $marca = $row['marca'];
+                $fabricante = $row['fabricante'];
+                $pais = $row['id_pais'];
+            }
+    }
 
-                    while($row = mysqli_fetch_array($respuesta_marca)) { ?>
-                        <tr>
-                            <td> <?php echo $row['id_marca'] ?> </td>
-                            <td> <?php echo $row['marca'] ?> </td>
-                            <td> <?php echo $row['fabricante'] ?> </td>
-                            <td> <?php echo $row['id_pais'] ?> </td>
-                            <td>
-                                <!-- <a href="../ edit.php?id=<?php echo $row['id']?>" class="btn btn-secondary"><img src="../img/edit.ico" alt="" width="25px" height="25px"></a>
-                                <a href="delete_task.php?id=<?php echo $row['id']?>" class="btn btn-danger"><img src="../img/delete.ico" alt="" width="25px" height="25px"></a> -->
+    if (isset($_POST['modificar-registro'])) {
+        $id_marca = $_GET['id_marca'];
+        $marca = $_POST['marca'];
+        $fabricante = $_POST['fabricante'];
+        $pais = $_POST['id_pais'];
 
-                                <div class="contenedor-imagen">
-                                    <a class="caja-imagen caja-imagen-edit" href="modificar_marca.php">
-                                        <img class="icono icono-edit" src="../img/edit.ico" alt="">
-                                    </a>
-                                    <a class="caja-imagen caja-imagen-delete" href="/creacion/modificar_marca.php">
-                                        <img class="icono icono-delete" src="../img/delete.ico" alt="">
-                                    </a>
+        $query = "UPDATE marca SET marca = '$marca', fabricante = '$fabricante', id_pais = '$pais' WHERE id_marca = $id_marca";
+        mysqli_query($conn, $query);
 
-                                </div>
-
-                                
-                            </td>
-                        </tr>
-                    <?php }    ?>
-            </tbody>
-        </table>
-
-    </div>
+        //guardamos la consulta en la base de datos
+        $resultado = mysqli_query($conn, $query);
 
 
 
+        if (!$resultado) {
+
+            die("Consulta fallida");
+            
+        }
+
+        $_SESSION['mensaje'] = "Datos Guardados Exitosamente"; // creamos un mensaje para mostrar en la página
+        $_SESSION['tipo-mensaje'] = "success"; // creamos un tipo de mensaje para mostrar en la página
 
 
-</div>
+        header("Location: modificar_marca.php");
+
+    }
 
 
+    
 
+    
 
-
-
-
-
-
-
-<?php include ('footer.php') ?>
+?>

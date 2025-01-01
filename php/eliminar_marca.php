@@ -10,6 +10,14 @@
         $respuesta = mysqli_query($conn, $query);
 
 
+        if (!$respuesta) {
+            die("Consulta fallida");
+        }
+
+        $_SESSION['mensaje'] = "Datos Eliminados Correctamente";
+        $_SESSION['tipo-mensaje'] = "danger";
+
+
         header("Location: listar_marca.php");
     }
 

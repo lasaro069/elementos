@@ -19,6 +19,14 @@
 
             
 
+                    <div class="contenedor-inputs">
+                        <label class="label-inputs-formulario" for="marca">Id Marca:</label>
+                        <input class="entrada-datos" type="text" id="id_marca" name="id_marca" ><br>
+
+                    </div>
+
+
+
 
                     <div class="contenedor-inputs">
                         <label class="label-inputs-formulario" for="marca">Marca:</label>

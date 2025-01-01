@@ -26,15 +26,15 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
     font-size: 1.5rem;
-
+    padding: 0px 0px 0px 5px;
 }
 
 h1 {
     width: 50%;
     padding-left: 0px;
     font-weight: bold;
+    margin: 5px 0px;
 }
 
 .navbar {
@@ -42,6 +42,7 @@ h1 {
     padding-left: 0px;
     display: flex;
     justify-content: right;
+    margin-right: 10px;
 }
 
 .navbar a {
@@ -162,14 +163,16 @@ h1 {
 
 }
 
+
+
 .entrada-datos {
-    width: 60%;
+    width: 80%;
     height: 30px;
     border: none;
     box-shadow: 1px 1px 1px 1px gray;
     border-radius: 5px;
+    padding-left: 5px;
 }
-
 
 
 
@@ -225,7 +228,7 @@ h1 {
     flex-direction: column;
     align-self: baseline;
     width: 400px;
-    height: 50%;
+    height: 75%;
     border-radius: 5px;
     box-shadow: 2px 2px 5px black;
 }
@@ -248,15 +251,6 @@ h1 {
     margin-right: 15px;
 
 }
-
-.entrada-datos {
-    width: 80%;
-    height: 30px;
-    border: none;
-    box-shadow: 1px 1px 1px 1px gray;
-    border-radius: 5px;
-}
-
 
 
 
@@ -414,7 +408,7 @@ tbody {
 .contenedor-mensaje p {
     width: 100%;
     height: 50px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 0;
     align-content: center;
 }
@@ -426,6 +420,5 @@ tbody {
 }
 
 .input-mensaje {
-    margin-right: 15px;
-    font-size: 2rem;
+    font-size: 1.2rem;
 }

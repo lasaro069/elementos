@@ -19,6 +19,14 @@
 
 
                     <div class="contenedor-inputs">
+                        <label class="label-inputs-formulario" for="id_marca">ID Marca:</label>
+                        <input class="entrada-datos" type="text" id="id_marca" name="id_marca" ><br>
+
+                    </div>
+
+
+
+                    <div class="contenedor-inputs">
                         <label class="label-inputs-formulario" for="marca">Marca:</label>
                         <input class="entrada-datos" type="text" id="marca" name="marca" ><br>
 
@@ -95,10 +103,11 @@
             <tbody>
                 <?php
                 
+                    $id_marca = $_POST['id_marca'];
                     $marca = $_POST['marca'];
                     $fabricante = $_POST['fabricante'];
                     
-                    $query = "SELECT * FROM marca WHERE marca = '$marca' OR fabricante = '$fabricante'";
+                    $query = "SELECT * FROM marca WHERE id_marca = '$id_marca' OR marca = '$marca' OR fabricante = '$fabricante'";
                     $respuesta_marca = mysqli_query($conn, $query);
 
                     while($row = mysqli_fetch_array($respuesta_marca)) { ?>
@@ -110,10 +119,10 @@
                             <td>
 
                                 <div class="contenedor-imagen">
-                                    <a class="caja-imagen caja-imagen-edit" href="modificar_marca.php">
+                                    <a class="caja-imagen caja-imagen-edit" href="modificar_marca.php?id_marca=<?php echo $row['id_marca'] ?>">
                                         <img class="icono icono-edit" src="../img/edit.ico" alt="">
                                     </a>
-                                    <a class="caja-imagen caja-imagen-delete" href="eliminar_marca.php">
+                                    <a class="caja-imagen caja-imagen-delete" href="eliminar_marca.php?id_marca=<?php echo $row['id_marca'] ?>">
                                         <img class="icono icono-delete" src="../img/delete.ico" alt="">
                                     </a>
 
