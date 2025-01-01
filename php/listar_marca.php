@@ -49,7 +49,7 @@
 
 
 
-                    <button class="boton-ingresar" name="guardar-marca" value="Listado Genaral">
+                    <button class="boton-ingresar" name="listar-marca" value="Listado Genaral">
                         <a class="boton-ingresar-a" href="listar_marca.php">Listado General</a>
                     </button>
 

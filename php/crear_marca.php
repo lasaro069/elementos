@@ -47,6 +47,13 @@
 
 
 
+
+            <button class="boton-ingresar" name="listar-marca" value="Listado Genaral">
+                        <a class="boton-ingresar-a" href="listar_marca.php">Listado General</a>
+            </button>
+
+
+
             <?php
         
         if (isset($_SESSION['mensaje'])) { ?>
