@@ -13,7 +13,7 @@
     <header class="header">
         <h1>Tienda de Equipos</h1>
         <nav class="navbar">
-            <a href="./index.php">Inicio</a>
+            <a href="../index.php">Inicio</a>
             <a href="./elemento.php">Elementos</a>
             <a href="./categoria.php">Categorías</a>
             <a href="./estado.php">Estado</a>

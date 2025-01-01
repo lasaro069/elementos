@@ -218,7 +218,7 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 1200px;
+    width: 1400px;
     height: 78vh;
 }
 
@@ -304,7 +304,7 @@ h1 {
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    width: 800px;
+    width: 1000px;
     height: 100%;
     margin-left: 10px;
     overflow-y: auto;
