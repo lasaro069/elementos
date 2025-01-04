@@ -47,6 +47,11 @@
 
 
 
+                    <button class="boton-ingresar" name="crear-categoria" value="Nueva Categoría">
+                        <a class="boton-ingresar-a" href="crear_categoria.php">Nueva Categoría</a>
+                    </button>
+
+
                     <button class="boton-ingresar" name="guardar-categoria" value="Listado Genaral">
                         <a class="boton-ingresar-a" href="listar_categoria.php">Listado General</a>
                     </button>

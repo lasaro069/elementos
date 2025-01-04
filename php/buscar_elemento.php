@@ -47,6 +47,11 @@
 
 
 
+                    <button class="boton-ingresar" name="crear-elemento" value="Nuevo Elemento">
+                        <a class="boton-ingresar-a" href="crear_elemento.php">Nuevo Elemento</a>
+                    </button>
+
+
                     <button class="boton-ingresar" name="guardar-elemento" value="Listado Genaral">
                         <a class="boton-ingresar-a" href="listar_elemento.php">Listado General</a>
                     </button>

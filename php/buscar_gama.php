@@ -39,6 +39,11 @@
 
 
 
+                    <button class="boton-ingresar" name="crear-gama" value="Crear Gama">
+                        <a class="boton-ingresar-a" href="crear_gama.php">Nueva Gama</a>
+                    </button>
+
+
                     <button class="boton-ingresar" name="guardar-gama" value="Listado Genaral">
                         <a class="boton-ingresar-a" href="listar_gama.php">Listado General</a>
                     </button>

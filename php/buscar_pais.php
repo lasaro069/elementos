@@ -39,6 +39,11 @@
 
 
 
+                    <button class="boton-ingresar" name="crear-pais" value="Crear País">
+                        <a class="boton-ingresar-a" href="crear_pais.php">Nuevo País</a>
+                    </button>
+
+
                     <button class="boton-ingresar" name="guardar-pais" value="Listado Genaral">
                         <a class="boton-ingresar-a" href="listar_pais.php">Listado General</a>
                     </button>
@@ -96,7 +101,7 @@
                     $id_pais = $_POST['id_pais'];
                     $pais = $_POST['pais'];
                     
-                    $query = "SELECT * FROM pais WHERE id_pais = '$id_pais' OR pais = '$pais' ";
+                    $query = "SELECT * FROM pais WHERE id_pais = '$id_pais' OR pais LIKE '$pais%' ";
                     $respuesta_pais = mysqli_query($conn, $query);
 
                     while($row = mysqli_fetch_array($respuesta_pais)) { ?>

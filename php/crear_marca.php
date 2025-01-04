@@ -92,10 +92,4 @@
 
 
 
-
-
-
-
-
-
 <?php include ('footer.php') ?>

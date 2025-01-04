@@ -39,6 +39,11 @@
 
 
 
+                    <button class="boton-ingresar" name="crear-estado" value="Nuevo Estado">
+                        <a class="boton-ingresar-a" href="crear_estado.php">Nuevo Estado</a>
+                    </button>
+
+
                     <button class="boton-ingresar" name="guardar-estado" value="Listado Genaral">
                         <a class="boton-ingresar-a" href="listar_estado.php">Listado General</a>
                     </button>

@@ -49,6 +49,11 @@
 
 
 
+                    <button class="boton-ingresar" name="crear-marca" value="Nueva Marca">
+                        <a class="boton-ingresar-a" href="crear_marca.php">Nueva Marca</a>
+                    </button>
+
+
                     <button class="boton-ingresar" name="listar-marca" value="Listado Genaral">
                         <a class="boton-ingresar-a" href="listar_marca.php">Listado General</a>
                     </button>
@@ -83,7 +88,7 @@
             
             <thead>
                 <tr >
-                    <th class="titulo-tabla" colspan="5">Listado de Elementos</th>
+                    <th class="titulo-tabla" colspan="5">Listado de Marcas</th>
                 </tr>
                 <tr>
                     <th scope="col">ID</th>
@@ -96,7 +101,7 @@
             <tbody>
                 <?php
                 
-                    $query = "SELECT * FROM marca";
+                    $query = "SELECT m.id_marca, m.marca, m.fabricante, p.pais FROM marca m INNER JOIN pais p ON m.id_pais = p.id_pais;";
                     $respuesta_marca = mysqli_query($conn, $query);
 
                     while($row = mysqli_fetch_array($respuesta_marca)) { ?>
@@ -104,7 +109,7 @@
                             <td> <?php echo $row['id_marca'] ?> </td>
                             <td> <?php echo $row['marca'] ?> </td>
                             <td> <?php echo $row['fabricante'] ?> </td>
-                            <td> <?php echo $row['id_pais'] ?> </td>
+                            <td> <?php echo $row['pais'] ?> </td>
                             <td>
 
                                 <div class="contenedor-imagen">

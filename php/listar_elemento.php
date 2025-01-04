@@ -49,6 +49,11 @@
 
 
 
+                    <button class="boton-ingresar" name="crear-elemento" value="Nuevo Elemento">
+                        <a class="boton-ingresar-a" href="crear_elemento.php">Nuevo Elemento</a>
+                    </button>
+
+
                     <button class="boton-ingresar" name="listar-elemento" value="Listado Genaral">
                         <a class="boton-ingresar-a" href="listar_elemento.php">Listado General</a>
                     </button>
@@ -92,33 +97,33 @@
                     <th scope="col">Modelo</th>
                     <th scope="col">Gama</th>
                     <th scope="col">Descripción</th>
-                    <th scope="col">Fecha Ingreso</th>
+                    <!-- <th scope="col">Fecha Ingreso</th> -->
                     <th scope="col">Estado</th>
                     <th scope="col">Ubicación</th>
-                    <th scope="col">Imagen</th>
+                    <!-- <th scope="col">Imagen</th> -->
                     <th scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                 
-                    $query = "SELECT * FROM elementos";
+                    $query = "SELECT el.nr_inventario, cat.categoria, mar.marca, ga.gama, el.modelo, el.descripcion, es.estado, el.ubicacion FROM elementos el INNER JOIN categoria cat ON el.id_categoria = cat.id_categoria INNER JOIN marca mar ON el.id_marca = mar.id_marca INNER JOIN gama ga ON el.id_gama = ga.id_gama INNER JOIN estado es ON el.id_estado = es.id_estado;";
                     $respuesta_elemento = mysqli_query($conn, $query);
 
                     while($row = mysqli_fetch_array($respuesta_elemento)) { ?>
                         <tr>
                             <td> <?php echo $row['nr_inventario'] ?> </td>
-                            <td> <?php echo $row['id_categoria'] ?> </td>
-                            <td> <?php echo $row['id_marca'] ?> </td>
+                            <td> <?php echo $row['categoria'] ?> </td>
+                            <td> <?php echo $row['marca'] ?> </td>
                             <td> <?php echo $row['modelo'] ?> </td>
-                            <td> <?php echo $row['id_gama'] ?> </td>
+                            <td> <?php echo $row['gama'] ?> </td>
                             <td> <?php echo $row['descripcion'] ?> </td>
-                            <td> <?php echo $row['fecha_ingreso'] ?> </td>
-                            <td> <?php echo $row['id_estado'] ?> </td>
+                            <!-- <td> <?php echo $row['fecha_ingreso'] ?> </td> -->
+                            <td> <?php echo $row['estado'] ?> </td>
                             <td> <?php echo $row['ubicacion'] ?> </td>
-                            <td> 
+                            <!-- <td> 
                                 <img src="<?php echo $row['imagen'] ?> " alt="" width="80px">
-                            </td>
+                            </td> -->
                             <td>
 
                                 <div class="contenedor-imagen">

@@ -47,6 +47,11 @@
 
 
 
+                    <button class="boton-ingresar" name="crear-marca" value="Nueva Marca">
+                        <a class="boton-ingresar-a" href="crear_marca.php">Nueva Marca</a>
+                    </button>
+
+
                     <button class="boton-ingresar" name="guardar-marca" value="Listado Genaral">
                         <a class="boton-ingresar-a" href="listar_marca.php">Listado General</a>
                     </button>
