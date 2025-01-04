@@ -4,9 +4,9 @@
 
 
 
-    if (isset($_GET['id_marca'])) {
-        $id_marca = $_GET['id_marca'];
-        $query = "DELETE FROM marca WHERE id_marca = $id_marca";
+    if (isset($_GET['nr_inventario'])) {
+        $nr_inventario = $_GET['nr_inventario'];
+        $query = "DELETE FROM elementos WHERE nr_inventario = $nr_inventario";
         $respuesta = mysqli_query($conn, $query);
 
 
@@ -18,7 +18,7 @@
         $_SESSION['tipo-mensaje'] = "danger";
 
 
-        header("Location: listar_marca.php");
+        header("Location: listar_elemento.php");
     }
 
     

@@ -87,7 +87,7 @@
             <tbody>
                 <?php
                 
-                    $query = "SELECT * FROM pais";
+                    $query = "SELECT * FROM pais ORDER BY pais";
                     $respuesta_pais = mysqli_query($conn, $query);
 
                     while($row = mysqli_fetch_array($respuesta_pais)) { ?>

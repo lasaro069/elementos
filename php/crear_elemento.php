@@ -9,20 +9,20 @@
     <div class="contenedor-formulario">
 
 
-        <form class="formulario-ingreso" action="guardar_marca.php" method="post">
-            <h2>Crear Marca</h2>
+        <form class="formulario-ingreso" action="guardar_elemento.php" method="post" enctype="multipart/form-data">
+            <h2>Crear Elemento</h2>
 
-    <!-- 
+<!--      
             <div class="contenedor-inputs">
-                <label class="label-inputs-formulario"  for="id-marca">Id Marca:</label>
-                <input class="entrada-datos" type="text" id="id-marca" name="id-marca" required placeholder="Este campo no debe poder modificarse. "><br>
+                <label class="label-inputs-formulario"  for="nr_inventario">Nr Inventario:</label>
+                <input class="entrada-datos" type="text" id="nr_inventario" name="nr_inventario" required placeholder=" <?php '$nr_inventario' ?> " readonly><br>
 
             </div> -->
 
 
             <div class="contenedor-inputs">
-                <label class="label-inputs-formulario" for="marca">Marca:</label>
-                <input class="entrada-datos" type="text" id="marca" name="marca" required><br>
+                <label class="label-inputs-formulario" for="id_categoria">Id Categoría:</label>
+                <input class="entrada-datos" type="text" id="id_categoria" name="id_categoria" required><br>
 
             </div>
 
@@ -30,26 +30,95 @@
 
             <div class="contenedor-inputs">
 
-                <label class="label-inputs-formulario" for="fabricante">Fabricante:</label>
-                <input class="entrada-datos" type="text" id="fabricante" name="fabricante" required><br>
+                <label class="label-inputs-formulario" for="id_marca">Id Marca:</label>
+                <input class="entrada-datos" type="text" id="id_marca" name="id_marca" required><br>
             </div>
 
             <div class="contenedor-inputs">
 
-                <label class="label-inputs-formulario" for="id_pais">ID País:</label>
-                <input class="entrada-datos" type="text" id="id_pais" name="id_pais" required><br>
+                <label class="label-inputs-formulario" for="modelo">Modelo:</label>
+                <input class="entrada-datos" type="text" id="modelo" name="modelo" required><br>
             </div>
 
 
 
-            <input class="boton-ingresar" name="guardar-marca" type="submit" value="Registrar">
+            <div class="contenedor-inputs">
+
+                <label class="label-inputs-formulario" for="id_gama">Id Gama:</label>
+                <input class="entrada-datos" type="text" id="id_gama" name="id_gama" required><br>
+            </div>
+
+
+
+
+            <div class="contenedor-inputs">
+
+                <label class="label-inputs-formulario" for="descripcion">Descripción:</label>
+                <input class="entrada-datos" type="text" id="descripcion" name="descripcion" required><br>
+            </div>
+
+
+
+            
+
+<!-- 
+
+            <div class="contenedor-inputs">
+
+                <label class="label-inputs-formulario" for="fecha_ingreso">Fecha de Ingreso:</label>
+                <input class="entrada-datos" type="text" id="fecha_ingreso" name="fecha_ingreso"  placeholder="aaaa/mm/dd"><br>
+            </div>
+ -->
+
+
+            
+
+
+
+            <div class="contenedor-inputs">
+
+                <label class="label-inputs-formulario" for="id_estado">Id Estado:</label>
+                <input class="entrada-datos" type="text" id="id_estado" name="id_estado" required><br>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="contenedor-inputs">
+
+                <label class="label-inputs-formulario" for="ubicacion">Ubicación:</label>
+                <input class="entrada-datos" type="text" id="ubicacion" name="ubicacion" required><br>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="contenedor-inputs">
+
+                <label class="label-inputs-formulario" for="imagen">Imagen:</label>
+                <input class="entrada-datos" type="file" id="imagen" name="imagen" ><br>
+            </div>
+
+
+
+
+
+            <input class="boton-ingresar" name="guardar-elemento" type="submit" value="Registrar">
 
 
 
 
 
             <button class="boton-ingresar" name="listar-marca" value="Listado Genaral">
-                        <a class="boton-ingresar-a" href="listar_marca.php">Listado General</a>
+                        <a class="boton-ingresar-a" href="listar_elemento.php">Listado General</a>
             </button>
 
 

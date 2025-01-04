@@ -14,13 +14,13 @@
 
 
 
-<form class="formulario-ingreso" action="buscar_elemento.php" method="post">
+<form class="formulario-ingreso" action="buscar_elemento.php" method="post" enctype="multipart/form-data">
                     <h2>Buscar Elemento</h2>
 
             
 
                     <div class="contenedor-inputs">
-                        <label class="label-inputs-formulario" for="elemento">Id:</label>
+                        <label class="label-inputs-formulario" for="nr_inventario">Nr Inventario:</label>
                         <input class="entrada-datos" type="text" id="nr_inventario" name="nr_inventario" ><br>
 
                     </div>
@@ -29,8 +29,8 @@
 
 
                     <div class="contenedor-inputs">
-                        <label class="label-inputs-formulario" for="elemento">Elemento:</label>
-                        <input class="entrada-datos" type="text" id="elemento" name="elemento" ><br>
+                        <label class="label-inputs-formulario" for="id_categoria">Id Categoria:</label>
+                        <input class="entrada-datos" type="text" id="id_categoria" name="id_categoria" ><br>
 
                     </div>
 
@@ -38,8 +38,8 @@
 
                     <div class="contenedor-inputs">
 
-                        <label class="label-inputs-formulario" for="id_categoria">id_categoria:</label>
-                        <input class="entrada-datos" type="text" id="id_categoria" name="id_categoria" ><br>
+                        <label class="label-inputs-formulario" for="descripcion">Descripción:</label>
+                        <input class="entrada-datos" type="text" id="descripcion" name="descripcion" ><br>
                     </div>
 
 
@@ -116,7 +116,9 @@
                             <td> <?php echo $row['fecha_ingreso'] ?> </td>
                             <td> <?php echo $row['id_estado'] ?> </td>
                             <td> <?php echo $row['ubicacion'] ?> </td>
-                            <td> <?php echo $row['imagen'] ?> </td>
+                            <td> 
+                                <img src="<?php echo $row['imagen'] ?> " alt="" width="80px">
+                            </td>
                             <td>
 
                                 <div class="contenedor-imagen">
