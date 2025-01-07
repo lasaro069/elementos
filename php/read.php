@@ -6,15 +6,15 @@
     <h2>Selecciona una opción</h2>
     <div class="contenedor-opciones">
 
-        <a href="#" class="opciones">
+        <a href="listar_elemento.php" class="opciones">
             <img class="imagen" src="../img/new.svg" alt="" class="icono">
             <p class="texto-opcion">Listar Elementos</p>
         </a>
-        <a href="./modificar.php" class="opciones">
+        <a href="./listar_gama.php" class="opciones">
             <img class="imagen" src="../img/modificar.svg" alt="" class="icono">
             <p class="texto-opcion">Listar Gama</p>
         </a>
-        <a href="./buscar.php" class="opciones">
+        <a href="./listar_estado.php" class="opciones">
             <img class="imagen" src="../img/estado.svg" alt="" class="icono">
             <p class="texto-opcion">Listar Estado</p>
         </a>
@@ -22,7 +22,7 @@
             <img class="imagen" src="../img/marca.svg" alt="" class="icono">
             <p class="texto-opcion">Listar Marca</p>
         </a>
-        <a href="./eliminar.php" class="opciones">
+        <a href="./listar_tipo.php" class="opciones">
             <img class="imagen" src="../img/tipo.svg" alt="" class="icono">
             <p class="texto-opcion">Listar Tipo</p>
         </a>
