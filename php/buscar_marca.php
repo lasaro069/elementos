@@ -53,7 +53,7 @@
 
 
                     <button class="boton-ingresar" name="guardar-marca" value="Listado Genaral">
-                        <a class="boton-ingresar-a" href="listar_marca.php">Listado General</a>
+                        <a class="boton-ingresar-a" href="listar_marca.php">Listar Marcas</a>
                     </button>
 
 
@@ -95,7 +95,7 @@
             
             <thead>
                 <tr >
-                    <th class="titulo-tabla" colspan="5">Listado de Elementos</th>
+                    <th class="titulo-tabla" colspan="5">Listado de Marcas</th>
                 </tr>
                 <tr>
                     <th scope="col">ID</th>
