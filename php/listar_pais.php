@@ -42,16 +42,16 @@
 
 
 
-                    <button class="boton-ingresar" name="crear-pais" value="Crear País">
-                        <a class="boton-ingresar-a" href="crear_pais.php">Nuevo País</a>
-                    </button>
+                    <a class="boton-ingresar-a" href="crear_pais.php">
+                        <div class="div-a"><h5>Nuevo País</h5></div>
+                    </a>
 
 
+                    <a class="boton-ingresar-a" href="listar_pais.php">
+                        <div class="div-a"><h5>Listar Países</h5></div>
+                            
+                    </a>
 
-
-                    <button class="boton-ingresar" name="listar-pais" value="Listado Genaral">
-                        <a class="boton-ingresar-a" href="listar_pais.php">Listado General</a>
-                    </button>
 
 
 

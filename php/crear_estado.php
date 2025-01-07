@@ -12,12 +12,6 @@
         <form class="formulario-ingreso" action="guardar_estado.php" method="post">
             <h2>Crear Estado</h2>
 
-    <!-- 
-            <div class="contenedor-inputs">
-                <label class="label-inputs-formulario"  for="id-estado">Id estado:</label>
-                <input class="entrada-datos" type="text" id="id-estado" name="id-estado" required placeholder="Este campo no debe poder modificarse. "><br>
-
-            </div> -->
 
 
             <div class="contenedor-inputs">
@@ -36,9 +30,11 @@
 
 
 
-            <button class="boton-ingresar" name="listar-estado" value="Listado Genaral">
-                        <a class="boton-ingresar-a" href="listar_estado.php">Listado General</a>
-            </button>
+            <a class="boton-ingresar-a" href="listar_estado.php">
+                        <div class="div-a"><h5>Listar Estados</h5></div>
+                            
+                    </a>
+
 
 
 

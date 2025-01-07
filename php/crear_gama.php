@@ -12,12 +12,6 @@
         <form class="formulario-ingreso" action="guardar_gama.php" method="post">
             <h2>Crear Gama</h2>
 
-    <!-- 
-            <div class="contenedor-inputs">
-                <label class="label-inputs-formulario"  for="id-gama">Id gama:</label>
-                <input class="entrada-datos" type="text" id="id-gama" name="id-gama" required placeholder="Este campo no debe poder modificarse. "><br>
-
-            </div> -->
 
 
             <div class="contenedor-inputs">
@@ -36,9 +30,10 @@
 
 
 
-            <button class="boton-ingresar" name="listar-gama" value="Listado Genaral">
-                        <a class="boton-ingresar-a" href="listar_gama.php">Listado General</a>
-            </button>
+            <a class="boton-ingresar-a" href="listar_gama.php">
+                        <div class="div-a"><h5>Listar Gamas</h5></div>
+                            
+                    </a>
 
 
 

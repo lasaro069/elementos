@@ -12,12 +12,6 @@
         <form class="formulario-ingreso" action="guardar_pais.php" method="post">
             <h2>Crear País</h2>
 
-    <!-- 
-            <div class="contenedor-inputs">
-                <label class="label-inputs-formulario"  for="id-pais">Id pais:</label>
-                <input class="entrada-datos" type="text" id="id-pais" name="id-pais" required placeholder="Este campo no debe poder modificarse. "><br>
-
-            </div> -->
 
 
             <div class="contenedor-inputs">
@@ -36,9 +30,11 @@
 
 
 
-            <button class="boton-ingresar" name="listar-pais" value="Listado Genaral">
-                        <a class="boton-ingresar-a" href="listar_pais.php">Listado General</a>
-            </button>
+            <a class="boton-ingresar-a" href="listar_pais.php">
+                        <div class="div-a"><h5>Listar Países</h5></div>
+                            
+                    </a>
+
 
 
 

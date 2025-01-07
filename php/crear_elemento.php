@@ -12,13 +12,6 @@
         <form class="formulario-ingreso" action="guardar_elemento.php" method="post" enctype="multipart/form-data">
             <h2>Crear Elemento</h2>
 
-<!--      
-            <div class="contenedor-inputs">
-                <label class="label-inputs-formulario"  for="nr_inventario">Nr Inventario:</label>
-                <input class="entrada-datos" type="text" id="nr_inventario" name="nr_inventario" required placeholder=" <?php '$nr_inventario' ?> " readonly><br>
-
-            </div> -->
-
 
             <div class="contenedor-inputs">
                 <label class="label-inputs-formulario" for="id_categoria">Id Categoría:</label>
@@ -116,10 +109,10 @@
 
 
 
-
-            <button class="boton-ingresar" name="listar-marca" value="Listado Genaral">
-                        <a class="boton-ingresar-a" href="listar_elemento.php">Listado General</a>
-            </button>
+            <a class="boton-ingresar-a" href="listar_elemento.php">
+                        <div class="div-a"><h5>Listar Elementos</h5></div>
+                            
+                    </a>
 
 
 

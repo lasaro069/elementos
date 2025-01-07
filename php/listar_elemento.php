@@ -49,14 +49,16 @@
 
 
 
-                    <button class="boton-ingresar" name="crear-elemento" value="Nuevo Elemento">
-                        <a class="boton-ingresar-a" href="crear_elemento.php">Nuevo Elemento</a>
-                    </button>
+                    <a class="boton-ingresar-a" href="crear_elemento.php">
+                        <div class="div-a"><h5>Nuevo Elemento</h5></div>
+                    </a>
 
 
-                    <button class="boton-ingresar" name="listar-elemento" value="Listado Genaral">
-                        <a class="boton-ingresar-a" href="listar_elemento.php">Listado General</a>
-                    </button>
+                    <a class="boton-ingresar-a" href="listar_elemento.php">
+                        <div class="div-a"><h5>Listar Elementos</h5></div>
+                            
+                    </a>
+
 
 
 

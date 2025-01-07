@@ -219,7 +219,7 @@ h1 {
     justify-content: center;
     align-items: center;
     width: 1400px;
-    height: 78vh;
+    height: 85vh;
 }
 
 .contenedor-formulario-modificar .formulario-ingreso {
@@ -228,9 +228,10 @@ h1 {
     flex-direction: column;
     align-self: baseline;
     width: 400px;
-    height: 75%;
+    height: auto;
     border-radius: 5px;
     box-shadow: 2px 2px 5px black;
+    padding-bottom: 10px;
 }
 
 .contenedor-inputs {
@@ -279,6 +280,15 @@ h1 {
     color: rgb(16, 14, 13);
     font-size: 1rem;
     padding-left: 0px;
+    margin-top: 10px;
+    height: 60px;
+    width: 160px;
+    border: none;
+    background-color: darkcyan;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 25px;
+    box-shadow: 2px 2px 5px black;
 }
 
 
@@ -421,4 +431,22 @@ tbody {
 
 .input-mensaje {
     font-size: 1.2rem;
+}
+
+
+
+.div-a {
+    display: flex;
+    justify-content: center;
+}
+
+.div-a h5 {
+    margin-top: 18px;
+}
+
+.boton-ingresar-a:hover {
+    color: white;
+    background-color: darkolivegreen;
+    transform: scale(1.1);
+    transition: 200ms;
 }

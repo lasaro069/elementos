@@ -6,7 +6,7 @@
     <h2>Selecciona una opción</h2>
     <div class="contenedor-opciones">
 
-        <a href="#" class="opciones">
+        <a href="crear_elemento.php" class="opciones">
             <img class="imagen" src="../img/new.svg" alt="" class="icono">
             <p class="texto-opcion">Crear Elementos</p>
         </a>

@@ -48,9 +48,10 @@
 
 
 
-            <button class="boton-ingresar" name="listar-marca" value="Listado Genaral">
-                        <a class="boton-ingresar-a" href="listar_marca.php">Listado General</a>
-            </button>
+            <a class="boton-ingresar-a" href="listar_marca.php">
+                        <div class="div-a"><h5>Listar Marcas</h5></div>
+                            
+                    </a>
 
 
 

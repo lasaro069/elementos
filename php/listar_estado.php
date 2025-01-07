@@ -42,14 +42,16 @@
 
 
 
-                    <button class="boton-ingresar" name="crear-estado" value="Nuevo Estado">
-                        <a class="boton-ingresar-a" href="crear_estado.php">Nuevo Estado</a>
-                    </button>
+                    <a class="boton-ingresar-a" href="crear_estado.php">
+                        <div class="div-a"><h5>Nuevo Estado</h5></div>
+                    </a>
 
 
-                    <button class="boton-ingresar" name="listar-estado" value="Listado Genaral">
-                        <a class="boton-ingresar-a" href="listar_estado.php">Listado General</a>
-                    </button>
+                    <a class="boton-ingresar-a" href="listar_estado.php">
+                        <div class="div-a"><h5>Listar Estados</h5></div>
+                            
+                    </a>
+
 
 
 

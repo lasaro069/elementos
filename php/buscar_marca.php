@@ -46,15 +46,15 @@
                     <input class="boton-ingresar" name="guardar-marca" type="submit" value="Buscar">
 
 
+                    <a class="boton-ingresar-a" href="crear_marca.php">
+                        <div class="div-a"><h5>Nueva Marca</h5></div>
+                    </a>
 
-                    <button class="boton-ingresar" name="crear-marca" value="Nueva Marca">
-                        <a class="boton-ingresar-a" href="crear_marca.php">Nueva Marca</a>
-                    </button>
 
-
-                    <button class="boton-ingresar" name="guardar-marca" value="Listado Genaral">
-                        <a class="boton-ingresar-a" href="listar_marca.php">Listar Marcas</a>
-                    </button>
+                    <a class="boton-ingresar-a" href="listar_marca.php">
+                        <div class="div-a"><h5>Listar Marcas</h5></div>
+                            
+                    </a>
 
 
 

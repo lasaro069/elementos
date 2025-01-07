@@ -42,10 +42,11 @@
 
 
 
+            <a class="boton-ingresar-a" href="listar_categoria.php">
+                        <div class="div-a"><h5>Listar Categorías</h5></div>
+                            
+                    </a>
 
-            <button class="boton-ingresar" name="listar-categoria" value="Listado Genaral">
-                        <a class="boton-ingresar-a" href="listar_categoria.php">Listado General</a>
-            </button>
 
 
 
